@@ -12,7 +12,12 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text('This is Search Page', style: appstyle(30, Colors.black, FontWeight.bold),),),
+      body: Center(
+        child: Text(
+          'This is Profile Page',
+          style: appstyle(30, Colors.black, FontWeight.bold),
+        ),
+      ),
     );
   }
 }

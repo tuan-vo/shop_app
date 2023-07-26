@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:shop_app/views/controllers/mainscreen_provider.dart';
 import 'package:shop_app/views/ui/main_screen.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(MultiProvider(providers: [
+    ChangeNotifierProvider(
+      create: (context) => MainScreenNotifier(),
+    )
+  ], child: const MainApp()));
 }
 
 class MainApp extends StatelessWidget {
