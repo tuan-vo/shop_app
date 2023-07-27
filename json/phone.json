@@ -1,0 +1,20 @@
+[
+    {
+        "id":"0",
+        "name":"Iphone 12",
+        "category":"Men's Running",
+        "imageUrl":[
+            "",
+            ""
+        ],
+        "oldPrice":"1899.00",
+        "sizes":[
+            {"size":"pro", "isSeleceted":false},
+            {"size":"pro max", "isSeleceted":false}
+        
+        ],
+        "price":"79.00",
+        "description":"absdbasdasdasd",
+        "title": "iphone134"
+    }
+]

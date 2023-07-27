@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:shop_app/views/shared/appstyle.dart';
+import 'package:shop_app/views/shared/product_card.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,6 +16,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFFE2E2E2),
       body: SizedBox(
         height: MediaQuery.of(context).size.height,
         child: Stack(
@@ -44,6 +46,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                           42, Colors.white, FontWeight.bold, 1.2),
                     ),
                     TabBar(
+                      padding: EdgeInsets.zero,
                       indicatorSize: TabBarIndicatorSize.label,
                       indicatorColor: Colors.transparent,
                       controller: _tabController,
@@ -83,15 +86,13 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                             scrollDirection: Axis.horizontal,
                             itemCount: 6,
                             itemBuilder: (context, index) {
-                              return Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Container(
-                                  color: Colors.grey,
-                                  height: MediaQuery.of(context).size.height,
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.6,
-                                ),
-                              );
+                              return const ProductCard(
+                                  price: "\$ 900.00",
+                                  category: "Phone",
+                                  id: "1",
+                                  name: "Iphone 14",
+                                  image:
+                                      "https://vantruongapple.vn/assets/uploads/images/no8SaLriNmWt_ip14pro4.png");
                             },
                           ),
                         ),
@@ -138,7 +139,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                           ),
                                           boxShadow: [
                                             BoxShadow(
-                                              color: Colors.black38,
+                                              color: Colors.white,
                                               spreadRadius: 1,
                                               blurRadius: 0.8,
                                               offset: Offset(0, 1),
